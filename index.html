@@ -534,7 +534,7 @@ $$(".up").forEach(el => el.addEventListener("click", e => { e.preventDefault(); 
   if(!cur || cur === "USD") return;
   fetch("https://open.er-api.com/v6/latest/USD").then(r => r.json()).then(j => {
     const r = j && j.rates && j.rates[cur]; if(!r) return;
-    FX.cur = cur; FX.rate = r;
+    FX.cur = cur; FX.rate = r * 1.0175;   // Whop's checkout converts 1.75% above the market rate (seen 7 Oct: A$81.82 market, A$83.25 charged) — the page shows what they pay
     $$("[data-usd]").forEach(e => e.textContent = money(+e.dataset.usd));
     render(); if(cart) renderCart();
     const n = $("#fxnote"); if(n){ n.textContent = `Prices in ${cur} · exact amount at checkout`; n.hidden = false; }
