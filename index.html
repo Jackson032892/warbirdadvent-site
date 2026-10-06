@@ -148,6 +148,7 @@ body.lock{overflow:hidden}
 .toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(30px);background:#111;color:#fff;padding:11px 18px;border-radius:10px;font-size:14px;opacity:0;transition:.25s;z-index:90;max-width:90vw;text-align:center}
 .toast.on{opacity:1;transform:translateX(-50%)}
 .pol{position:fixed;inset:0;background:#fff;z-index:60;overflow-y:auto;padding:16px 18px 40px}.pol-body{max-width:760px;margin:0 auto}.pol-body h1{font-size:24px;margin:10px 0}
+.fxn{font-size:12.5px;color:#7a7a84;margin:-4px 0 10px}
 .back{background:none;border:0;color:var(--primary);font-weight:600;padding:8px 0}
 @media(max-width:370px){.cdbar{gap:7px;padding:7px 8px}.cd-label{font-size:10.5px}.cd-sub{font-size:9.6px;letter-spacing:.3px}.cdu{width:27px;height:29px}.cdu b{font-size:12.5px}.cdu i{font-size:5.3px}.cd-clock{gap:2px}.cd-clock em{font-size:10px}}
 @media(max-width:749px){.buy h1{font-size:23px;margin:12px 0 6px}.rating{font-size:14px}.bens{margin:12px 0 4px;gap:6px}.bens li{font-size:14px}.price-row{margin:10px 0 8px}.price{font-size:23px}.price-row s{font-size:15px}.bs{margin:14px 0 10px;font-size:12.5px}.tiers{gap:9px}.tier{padding:9px 11px;border-radius:9px}.tier.on{padding:8px 10px}.tmain{grid-template-columns:18px 1fr auto;gap:9px}.radio{width:17px;height:17px}.tier.on .radio::after{width:8px;height:8px}.tname{font-size:16px;gap:6px}.chip{font-size:9.5px;padding:2px 6px}.tsub{font-size:11.5px}.tprice b{font-size:15.5px}.tprice s{font-size:11.5px}.tbadge{font-size:9.5px;padding:2px 8px;top:-9px}.ups{gap:5px;margin-top:8px}.up{grid-template-columns:16px 28px 1fr auto;gap:8px;padding:5px 8px;font-size:12.5px;border-radius:7px}.ubox{width:15px;height:15px}.up.on .ubox::after{font-size:10px}.uic{width:28px;height:28px;border-radius:6px;font-size:15px}.upr{font-size:12.5px}.upr s{font-size:10.5px}.atc{padding:14px;font-size:15.5px;margin-top:12px}.eta{font-size:12px}.badge{margin:2px 0 4px}.ftr .in{text-align:center}.ftr ul{justify-items:center;gap:10px}.ftr .soc{justify-content:center}}
@@ -166,11 +167,12 @@ body.lock{overflow:hidden}
 <h1>Warbird Advent™ Aircraft Advent Calendar</h1>
 
 <ul class="bens"><li><svg class="ck" viewBox="0 0 24 24" aria-hidden="true"><path fill="var(--primary)" d="M12 1.8l2.6 1.9 3.2-.1 1 3 2.6 1.9-1 3 1 3-2.6 1.9-1 3-3.2-.1L12 22.2l-2.6-1.9-3.2.1-1-3-2.6-1.9 1-3-1-3 2.6-1.9 1-3 3.2.1z"/><path d="M7.8 12.3l2.8 2.8 5.6-5.6" stroke="#fff" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><span>24 mini 3D aircraft, one a night</span></li><li><svg class="ck" viewBox="0 0 24 24" aria-hidden="true"><path fill="var(--primary)" d="M12 1.8l2.6 1.9 3.2-.1 1 3 2.6 1.9-1 3 1 3-2.6 1.9-1 3-3.2-.1L12 22.2l-2.6-1.9-3.2.1-1-3-2.6-1.9 1-3-1-3 2.6-1.9 1-3 3.2.1z"/><path d="M7.8 12.3l2.8 2.8 5.6-5.6" stroke="#fff" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><span>WWII fighters to stealth bombers</span></li><li><svg class="ck" viewBox="0 0 24 24" aria-hidden="true"><path fill="var(--primary)" d="M12 1.8l2.6 1.9 3.2-.1 1 3 2.6 1.9-1 3 1 3-2.6 1.9-1 3-3.2-.1L12 22.2l-2.6-1.9-3.2.1-1-3-2.6-1.9 1-3-1-3 2.6-1.9 1-3 3.2.1z"/><path d="M7.8 12.3l2.8 2.8 5.6-5.6" stroke="#fff" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Counts down 1 to 24 December</span></li></ul>
-<div class="price-row"><span class="price">$49.99</span><s>$71.41</s><span class="save-b">SAVE 30%</span></div>
+<div class="price-row"><span class="price" data-usd="49.99">$49.99</span><s data-usd="71.41">$71.41</s><span class="save-b">SAVE 30%</span></div>
+<p class="fxn" id="fxnote" hidden></p>
 <div class="badge">✈️ CHRISTMAS 2026 EDITION <span class="bsep">|</span> <span class="bfast"><span class="bdot" aria-hidden="true"></span>SELLING FAST</span></div>
 <div class="bs"><span>LIMITED TIME OFFER</span></div>
-<div class="tiers" id="tiers"><div class="tier on" data-q="1" role="radio" tabindex="0" aria-checked="true"><div class="tmain"><span class="radio"></span><span class="thead"><span class="tname">Buy 1<span class="chip">Free Shipping</span></span><span class="tsub">You Save 30% OFF</span></span><span class="tprice"><b>$49.99</b><s>$71.41</s></span></div></div><div class="tier" data-q="2" role="radio" tabindex="0" aria-checked="false"><span class="tbadge">MOST POPULAR</span><div class="tmain"><span class="radio"></span><span class="thead"><span class="tname">Buy 2<span class="chip">Free Shipping</span></span><span class="tsub">You Save 37% OFF</span></span><span class="tprice"><b>$89.98</b><s>$142.82</s></span></div></div><div class="tier" data-q="3" role="radio" tabindex="0" aria-checked="false"><div class="tmain"><span class="radio"></span><span class="thead"><span class="tname">Buy 3<span class="chip">Free Shipping</span></span><span class="tsub">You Save 44% OFF</span></span><span class="tprice"><b>$119.98</b><s>$214.23</s></span></div></div></div>
-<div class="ups" id="ups"><label class="up" data-u="Shipping Protection"><input type="checkbox" value="Shipping Protection"><span class="ubox"></span><span class="uic">🛡️</span><span class="utxt">Shipping Protection</span><span class="upr"><b data-upr></b><s>$7.98</s></span></label><label class="up" data-u="Mystery Box"><input type="checkbox" value="Mystery Box"><span class="ubox"></span><span class="uic">🎁</span><span class="utxt">Mystery Box</span><span class="upr"><b data-upr></b><s>$14.98</s></span></label></div>
+<div class="tiers" id="tiers"><div class="tier on" data-q="1" role="radio" tabindex="0" aria-checked="true"><div class="tmain"><span class="radio"></span><span class="thead"><span class="tname">Buy 1<span class="chip">Free Shipping</span></span><span class="tsub">You Save 30% OFF</span></span><span class="tprice"><b data-usd="49.99">$49.99</b><s data-usd="71.41">$71.41</s></span></div></div><div class="tier" data-q="2" role="radio" tabindex="0" aria-checked="false"><span class="tbadge">MOST POPULAR</span><div class="tmain"><span class="radio"></span><span class="thead"><span class="tname">Buy 2<span class="chip">Free Shipping</span></span><span class="tsub">You Save 37% OFF</span></span><span class="tprice"><b data-usd="89.98">$89.98</b><s data-usd="142.82">$142.82</s></span></div></div><div class="tier" data-q="3" role="radio" tabindex="0" aria-checked="false"><div class="tmain"><span class="radio"></span><span class="thead"><span class="tname">Buy 3<span class="chip">Free Shipping</span></span><span class="tsub">You Save 44% OFF</span></span><span class="tprice"><b data-usd="119.98">$119.98</b><s data-usd="214.23">$214.23</s></span></div></div></div>
+<div class="ups" id="ups"><label class="up" data-u="Shipping Protection"><input type="checkbox" value="Shipping Protection"><span class="ubox"></span><span class="uic">🛡️</span><span class="utxt">Shipping Protection</span><span class="upr"><b data-upr></b><s data-usd="7.98">$7.98</s></span></label><label class="up" data-u="Mystery Box"><input type="checkbox" value="Mystery Box"><span class="ubox"></span><span class="uic">🎁</span><span class="utxt">Mystery Box</span><span class="upr"><b data-upr></b><s data-usd="14.98">$14.98</s></span></label></div>
 <button class="atc" id="atc">ADD TO CART · <span id="atc-p"></span></button>
 <p class="eta" id="eta" data-pack="1-2" data-ship="6-10"></p>
 <ul class="pay" aria-label="Payment methods"><li class="amex">AMEX</li><li class="apple">Apple Pay</li><li class="gpay">G Pay</li><li class="mc"><i></i><i></i></li><li class="visa">VISA</li></ul><ul class="trust"><li><svg viewBox="0 0 24 24"><path d="M12 20.5s-7.5-4.6-7.5-10.2A4.3 4.3 0 0 1 12 7.6a4.3 4.3 0 0 1 7.5 2.7c0 5.6-7.5 10.2-7.5 10.2z"/></svg>Quality Promise</li><li><svg viewBox="0 0 24 24"><path d="M9 7H4V2M4.3 7A8.5 8.5 0 1 1 3.5 13"/></svg>Easy Returns</li><li><svg viewBox="0 0 24 24"><path d="M2.5 6.5h11v9h-11zM13.5 9.5h4l3 3v3h-7zM6 18.5a1.6 1.6 0 1 0 0-.1M17 18.5a1.6 1.6 0 1 0 0-.1"/></svg>Free Shipping</li></ul>
@@ -495,7 +497,11 @@ body.lock{overflow:hidden}
 <script>
 const D = {"title": "Warbird Advent™ Aircraft Advent Calendar", "prices": {"1|": 49.99, "1|Shipping Protection": 56.37, "1|Mystery Box": 61.97, "1|Mystery Box+Shipping Protection": 68.35, "2|": 89.98, "2|Shipping Protection": 96.36, "2|Mystery Box": 101.96, "2|Mystery Box+Shipping Protection": 108.34, "3|": 119.98, "3|Shipping Protection": 126.36}, "tiers": [1, 2, 3], "ups": ["Shipping Protection", "Mystery Box"], "compare": 71.41, "plans": {"1|": "plan_Hk5vggKK0tQ84", "1|Shipping Protection": "plan_T22Lp9hrIk28z", "1|Mystery Box": "plan_nWrR7CopPdNmQ", "1|Mystery Box+Shipping Protection": "plan_13mzUcfIO0BNF", "2|": "plan_EvnuuTRKVr5B5", "2|Shipping Protection": "plan_0Pb4xpxcygMQ4", "2|Mystery Box": "plan_p5zVWNcoDjVpn", "2|Mystery Box+Shipping Protection": "plan_7oD1XiDEnuoCv", "3|": "plan_7mypvTWZWmmKc", "3|Shipping Protection": "plan_oXLkA9vtdOsRc"}, "live": true, "email": "", "deadline": "2026-11-14T23:59:59+11:00", "after": "FREE WORLDWIDE SHIPPING"};
 const $ = s => document.querySelector(s), $$ = s => [...document.querySelectorAll(s)];
-const money = x => "$" + x.toLocaleString("en-US", {minimumFractionDigits: 2, maximumFractionDigits: 2});
+// his call 7 Oct: "make sure price translates to countries too" — the buyer sees their own currency (live rate, USD if anything fails);
+// Whop's checkout converts the charge itself, so the note says the checkout confirms the exact amount
+const FX = {cur: "USD", rate: 1};
+const money = x => FX.cur === "USD" ? "$" + x.toLocaleString("en-US", {minimumFractionDigits: 2, maximumFractionDigits: 2})
+  : new Intl.NumberFormat("en-US", {style: "currency", currency: FX.cur}).format(x * FX.rate);
 let tq = D.tiers[0], picked = new Set(), cart = null;
 function toast(t){ const el = $("#toast"); el.textContent = t; el.classList.add("on"); clearTimeout(toast.t); toast.t = setTimeout(() => el.classList.remove("on"), 2800); }
 function key(q, ups){ return q + "|" + [...ups].sort().join("+"); }
@@ -512,6 +518,28 @@ function render(){
 $$(".tier").forEach(t => { t.addEventListener("click", e => { if(e.target.closest(".up")) return; tq = +t.dataset.q; render(); });
   t.addEventListener("keydown", e => { if(e.key === "Enter" || e.key === " "){ e.preventDefault(); tq = +t.dataset.q; render(); } }); });
 $$(".up").forEach(el => el.addEventListener("click", e => { e.preventDefault(); e.stopPropagation(); const u = el.dataset.u; picked.has(u) ? picked.delete(u) : picked.add(u); render(); }));
+/* local currency: the country from the phone's time zone (then its language), the rate from a free live feed */
+(() => {
+  const tz = (Intl.DateTimeFormat().resolvedOptions().timeZone || ""), rg = ((navigator.language || "").split("-")[1] || "").toUpperCase();
+  const EUR = "Dublin Paris Berlin Madrid Rome Amsterdam Brussels Vienna Lisbon Helsinki Athens Luxembourg Monaco Malta Bratislava Ljubljana Tallinn Riga Vilnius Zagreb Nicosia Busingen Andorra Vatican San_Marino".split(" ");
+  const CAD = "Toronto Vancouver Edmonton Winnipeg Halifax Regina St_Johns Moncton Whitehorse Yellowknife Iqaluit Glace_Bay Goose_Bay Dawson_Creek Swift_Current Montreal Atikokan Creston Fort_Nelson Rankin_Inlet Cambridge_Bay Inuvik Resolute".split(" ");
+  const ZONE = {"Europe/London": "GBP", "Europe/Belfast": "GBP", "Europe/Guernsey": "GBP", "Europe/Jersey": "GBP", "Europe/Isle_of_Man": "GBP",
+    "Pacific/Auckland": "NZD", "Pacific/Chatham": "NZD", "Europe/Stockholm": "SEK", "Europe/Oslo": "NOK", "Europe/Copenhagen": "DKK",
+    "Europe/Zurich": "CHF", "Europe/Warsaw": "PLN", "Asia/Singapore": "SGD", "Asia/Tokyo": "JPY", "Asia/Kolkata": "INR", "Asia/Calcutta": "INR",
+    "America/Mexico_City": "MXN", "Africa/Johannesburg": "ZAR", "Asia/Dubai": "AED", "Asia/Hong_Kong": "HKD", "America/Sao_Paulo": "BRL", "Asia/Manila": "PHP"};
+  const REGION = {AU: "AUD", NZ: "NZD", GB: "GBP", UK: "GBP", CA: "CAD", IE: "EUR", DE: "EUR", FR: "EUR", ES: "EUR", IT: "EUR", NL: "EUR", BE: "EUR", AT: "EUR", PT: "EUR", FI: "EUR"};
+  const [area, city] = tz.split("/");
+  let cur = area === "Australia" ? "AUD" : ZONE[tz] || (area === "Europe" && EUR.includes(city) ? "EUR" : area === "America" && CAD.includes(city) ? "CAD" : null);
+  if(!cur && !/^America\//.test(tz)) cur = REGION[rg] || null;
+  if(!cur || cur === "USD") return;
+  fetch("https://open.er-api.com/v6/latest/USD").then(r => r.json()).then(j => {
+    const r = j && j.rates && j.rates[cur]; if(!r) return;
+    FX.cur = cur; FX.rate = r;
+    $$("[data-usd]").forEach(e => e.textContent = money(+e.dataset.usd));
+    render(); if(cart) renderCart();
+    const n = $("#fxnote"); if(n){ n.textContent = `Prices in ${cur} · exact amount at checkout`; n.hidden = false; }
+  }).catch(() => {});
+})();
 /* gallery */
 const sl = $("#slides");
 $$(".th").forEach(b => b.addEventListener("click", () => sl.scrollTo({left: sl.clientWidth * +b.dataset.i, behavior: "smooth"})));
