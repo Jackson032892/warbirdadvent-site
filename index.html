@@ -52,7 +52,7 @@ main{display:block}
 .utx{display:grid;min-width:0}.utx b{font-size:13.5px}.utx small{font-size:11.5px;color:var(--muted);line-height:1.35}.upr{font-weight:700;font-size:13.5px;white-space:nowrap}
 .atc{display:block;width:100%;margin-top:18px;background:var(--cta);color:#fff;border:0;border-radius:3px;padding:17px 14px;font-weight:700;font-size:13px;letter-spacing:2.2px;text-transform:uppercase;transition:transform .1s,filter .2s}
 .atc:hover{filter:brightness(1.12)}.atc:active{transform:scale(.99)}.atc .sep{opacity:.6;margin:0 4px}
-.eta{text-align:center;font-size:12.5px;color:var(--muted);margin:10px 0 0}.eta b{color:var(--ink);font-weight:600}
+
 .tl{list-style:none;padding:0;margin:16px 0 0;display:grid;gap:9px}.tl li{display:flex;align-items:center;gap:10px;font-size:13px}
 .desc{margin:22px 0 4px;font-size:15px;color:var(--ink)}
 .rows{margin-top:10px;border-top:1px solid var(--line)}.row{border-bottom:1px solid var(--line)}
@@ -140,19 +140,18 @@ body.lock{overflow:hidden}
 <p class="shipl"><i class="gdot"></i>Ships free worldwide, tracked</p>
 <p class="lab">BUNDLE &amp; SAVE</p>
 <div class="tiers" id="tiers"><div class="tier on" data-q="1" role="radio" tabindex="0" aria-checked="true"><span class="radio"></span><img class="tim" src="t1.png" alt=""><span class="tmid"><b>1 calendar</b><small><span data-usd="49.99">$49.99</span> each</small><span class="sv">SAVE 30%</span></span><span class="tpr"><b data-usd="49.99">$49.99</b><s data-usd="71.99">$71.99</s></span></div><div class="tier" data-q="2" role="radio" tabindex="0" aria-checked="false"><span class="tbadge">MOST POPULAR</span><span class="radio"></span><img class="tim" src="t2.png" alt=""><span class="tmid"><b>2 calendars</b><small><span data-usd="44.99">$44.99</span> each</small><span class="sv">SAVE 37%</span></span><span class="tpr"><b data-usd="89.98">$89.98</b><s data-usd="143.98">$143.98</s></span></div><div class="tier" data-q="3" role="radio" tabindex="0" aria-checked="false"><span class="radio"></span><img class="tim" src="t3.png" alt=""><span class="tmid"><b>3 calendars</b><small><span data-usd="42.49">$42.49</span> each</small><span class="sv">SAVE 40%</span></span><span class="tpr"><b data-usd="127.47">$127.47</b><s data-usd="215.97">$215.97</s></span></div><div class="tier" data-q="4" role="radio" tabindex="0" aria-checked="false"><span class="tbadge">BEST VALUE</span><span class="radio"></span><img class="tim" src="t4.png" alt=""><span class="tmid"><b>4 calendars</b><small><span data-usd="39.99">$39.99</span> each</small><span class="sv">SAVE 44%</span></span><span class="tpr"><b data-usd="159.97">$159.97</b><s data-usd="287.96">$287.96</s></span></div></div>
-<p class="lab">ADD TO YOUR ORDER</p><div class="ups" id="ups"><label class="up" data-u="Shipping Protection"><input type="checkbox" value="Shipping Protection"><span class="ubox"></span><span class="uic"><svg class="" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8l7.5 3v5.6c0 4.6-3.2 8.5-7.5 10.1-4.3-1.6-7.5-5.5-7.5-10.1V5.8zM8.6 12.2l2.4 2.4 4.4-4.6"/></svg></span><span class="utx"><b>Shipping Protection</b><small>Reshipped free if it is lost, stolen or arrives damaged</small></span><span class="upr" data-upr></span></label><label class="up" data-u="Mystery Box"><input type="checkbox" value="Mystery Box"><span class="ubox"></span><span class="uic"><svg class="" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 9h17v3.5h-17zM5 12.5h14V21H5zM12 9v12M12 9C10.5 5.6 7 5.2 7 7.3 7 8.6 9.4 9 12 9zm0 0c1.5-3.4 5-3.8 5-1.7 0 1.3-2.4 1.7-5 1.7"/></svg></span><span class="utx"><b>Mystery Box</b><small>A surprise gift packed in with your order</small></span><span class="upr" data-upr></span></label></div>
+<p class="lab">ADD TO YOUR ORDER</p><div class="ups" id="ups"><label class="up" data-u="Shipping Protection"><input type="checkbox" value="Shipping Protection"><span class="ubox"></span><span class="uic"><svg class="" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8l7.5 3v5.6c0 4.6-3.2 8.5-7.5 10.1-4.3-1.6-7.5-5.5-7.5-10.1V5.8zM8.6 12.2l2.4 2.4 4.4-4.6"/></svg></span><span class="utx"><b>Shipping Protection</b><small>Reshipped free if it is marked delivered but never reaches you</small></span><span class="upr" data-upr></span></label><label class="up" data-u="Mystery Box"><input type="checkbox" value="Mystery Box"><span class="ubox"></span><span class="uic"><svg class="" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 9h17v3.5h-17zM5 12.5h14V21H5zM12 9v12M12 9C10.5 5.6 7 5.2 7 7.3 7 8.6 9.4 9 12 9zm0 0c1.5-3.4 5-3.8 5-1.7 0 1.3-2.4 1.7-5 1.7"/></svg></span><span class="utx"><b>Mystery Box</b><small>A surprise gift packed in with your order</small></span><span class="upr" data-upr></span></label></div>
 <button class="atc" id="atc">ADD TO CART <span class="sep">·</span> <span id="atc-p"></span></button>
-<p class="eta" id="eta" data-pack="1-2" data-ship="6-10"></p>
 <ul class="tl"><li><svg class="" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 6.5h11v9h-11zM13.5 9.5h4l3 3v3h-7zM6 18.6a1.7 1.7 0 1 0 0-.1M17 18.6a1.7 1.7 0 1 0 0-.1"/></svg><span>Free tracked shipping, worldwide</span></li><li><svg class="" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 7H4.5V2.5M4.8 7A8.5 8.5 0 1 1 3.6 13"/></svg><span>30 day returns on unopened calendars</span></li><li><svg class="" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 9h17v3.5h-17zM5 12.5h14V21H5zM12 9v12M12 9C10.5 5.6 7 5.2 7 7.3 7 8.6 9.4 9 12 9zm0 0c1.5-3.4 5-3.8 5-1.7 0 1.3-2.4 1.7-5 1.7"/></svg><span>Arrives damaged? We replace it free</span></li></ul>
 </div>
 <p class="desc">An advent calendar for the aviation lover in your life. One door a night from the 1st of December, and behind each one a mini 3D aircraft on its own stand. By Christmas Eve, the whole squadron is lined up.</p>
-<div class="rows"><details class="row"><summary>What it is</summary><div><p>A Christmas advent calendar with 24 numbered doors. Behind each one is a mini 3D aircraft on its own display stand: WWII fighters and bombers, jets, stealth bombers, transport planes and helicopters. Each plane is about 4 cm (1.6 in) nose to tail. Open one a night from the 1st to the 24th of December.</p></div></details><details class="row"><summary>Shipping</summary><div><p>Free tracked shipping worldwide. Orders leave us within 1 to 2 business days and arrive 6 to 10 business days after that. Your tracking number is emailed the moment it ships. <a href="#shipping-policy">Shipping policy</a></p></div></details><details class="row"><summary>Returns and damage</summary><div><p>Arrives damaged or faulty? We replace it or refund it, free. Changed your mind? Unopened calendars can come back within 30 days of delivery. <a href="#refund-policy">Refund policy</a></p></div></details></div>
+<div class="rows"><details class="row"><summary>What it is</summary><div><p>A Christmas advent calendar with 24 numbered doors. Behind each one is a mini 3D aircraft on its own display stand: WWII fighters and bombers, jets, stealth bombers, transport planes and helicopters. Each plane is about 4 cm (1.6 in) nose to tail. Open one a night from the 1st to the 24th of December.</p></div></details><details class="row"><summary>Shipping</summary><div><p>Free tracked shipping worldwide. Orders leave the warehouse in 1 to 3 business days and arrive 7 to 14 business days after that. Your tracking link is emailed the moment it ships. <a href="#shipping-policy">Shipping policy</a></p></div></details><details class="row"><summary>Returns and damage</summary><div><p>Arrives damaged or faulty? We replace it or refund it, free. Changed your mind? Unopened calendars can come back within 30 days of delivery. <a href="#refund-policy">Refund policy</a></p></div></details></div>
 </div></section>
 <section class="cdband" id="cdband"><span class="cdn" id="cdn">–</span><span class="cdl">DAYS UNTIL DOOR NUMBER 1</span></section>
 <section class="dsec rv"><div class="dgrid" aria-hidden="true"><div class="dr" style="--i:0"><span class="dg">✈️</span><div class="df"><b>5</b></div></div><div class="dr" style="--i:1"><span class="dg">✈️</span><div class="df"><b>10</b></div></div><div class="dr" style="--i:2"><span class="dg">✈️</span><div class="df"><b>24</b></div></div><div class="dr" style="--i:3"><span class="dg">✈️</span><div class="df"><b>18</b></div></div><div class="dr" style="--i:4"><span class="dg">✈️</span><div class="df"><b>20</b></div></div><div class="dr" style="--i:5"><span class="dg">✈️</span><div class="df"><b>3</b></div></div><div class="dr" style="--i:6"><span class="dg">✈️</span><div class="df"><b>13</b></div></div><div class="dr" style="--i:7"><span class="dg">✈️</span><div class="df"><b>16</b></div></div><div class="dr" style="--i:8"><span class="dg">✈️</span><div class="df"><b>22</b></div></div><div class="dr" style="--i:9"><span class="dg">✈️</span><div class="df"><b>17</b></div></div><div class="dr" style="--i:10"><span class="dg">✈️</span><div class="df"><b>7</b></div></div><div class="dr" style="--i:11"><span class="dg">✈️</span><div class="df"><b>2</b></div></div><div class="dr" style="--i:12"><span class="dg">✈️</span><div class="df"><b>4</b></div></div><div class="dr" style="--i:13"><span class="dg">✈️</span><div class="df"><b>8</b></div></div><div class="dr" style="--i:14"><span class="dg">✈️</span><div class="df"><b>14</b></div></div><div class="dr" style="--i:15"><span class="dg">✈️</span><div class="df"><b>11</b></div></div><div class="dr" style="--i:16"><span class="dg">✈️</span><div class="df"><b>6</b></div></div><div class="dr" style="--i:17"><span class="dg">✈️</span><div class="df"><b>12</b></div></div><div class="dr" style="--i:18"><span class="dg">✈️</span><div class="df"><b>23</b></div></div><div class="dr" style="--i:19"><span class="dg">✈️</span><div class="df"><b>21</b></div></div><div class="dr" style="--i:20"><span class="dg">✈️</span><div class="df"><b>1</b></div></div><div class="dr" style="--i:21"><span class="dg">✈️</span><div class="df"><b>19</b></div></div><div class="dr" style="--i:22"><span class="dg">✈️</span><div class="df"><b>9</b></div></div><div class="dr" style="--i:23"><span class="dg">✈️</span><div class="df"><b>15</b></div></div></div><div class="dtxt"><p class="eyb">HOW IT WORKS</p><h2>One plane a night, the 1st to the 24th</h2><p>24 numbered doors. Open one each night from the 1st of December and there is a mini 3D aircraft on its own stand behind it. By Christmas Eve, the whole squadron is lined up.</p><a href="#buy" class="obtn">GET THE CALENDAR</a></div></section>
 <section class="story rv"><video src="https://assets-2-prod.whop.com/public/uploads/2026-10-06/e5095933-1ccd-4de6-a5e9-f7059609ec81/video.mp4" poster="story-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Warbird Advent™ Aircraft Advent Calendar"></video><div><p class="eyb">THE SQUADRON</p><h2>Cleared for take-off, one night at a time</h2><p>WWII fighters to stealth bombers and attack helicopters, each on its own stand and ready for a desk or shelf.</p></div></section>
 <section class="for"><div class="in rv"><p class="eyb">WHO IT IS FOR</p><h2>The gift they open every night</h2><ol><li><i>01</i><span>Your dad, who still builds the model kits</span></li><li><i>02</i><span>The plane spotter at the airport fence</span></li><li><i>03</i><span>A veteran who flew them, fixed them or loved them</span></li><li><i>04</i><span>The kid who wants to fly one day</span></li><li><i>05</i><span>The office Secret Santa</span></li></ol><a href="#buy" class="fbtn">GET THE CALENDAR</a></div></section>
-<section class="faq" id="faq"><div class="in"><h2>Questions, answered</h2><details class="fq"><summary>When do I start opening it?</summary><div>Door number 1 opens on the 1st of December, then one door a night until Christmas Eve. It is a countdown, so it is best in their hands before the 1st.</div></details><details class="fq"><summary>Will it arrive before December?</summary><div>Orders leave us within 1 to 2 business days and arrive 6 to 10 business days after that, tracked and free. Order by 14 November to open door number 1 on the 1st. The earlier you order, the more doors they get to open.</div></details><details class="fq"><summary>Do you ship to my country?</summary><div>Yes. Shipping is free and tracked worldwide. Depending on where you live, your country may charge import taxes on arrival.</div></details><details class="fq"><summary>What&#x27;s inside?</summary><div>24 mini 3D aircraft, one for each night from 1 to 24 December, each on its own display stand: WWII fighters and bombers, jets, stealth bombers, transport planes and helicopters. Each is about 4 cm (1.6 in) nose to tail. Small collectibles for a desk or shelf, not large die-cast models.</div></details><details class="fq"><summary>Can I buy more than one?</summary><div>Yes, and each one gets cheaper: <span data-usd="44.99">$44.99</span> each for two, <span data-usd="42.49">$42.49</span> each for three and <span data-usd="39.99">$39.99</span> each for four. Perfect for a squadron of plane lovers or a Secret Santa.</div></details><details class="fq"><summary>What if it arrives damaged?</summary><div>Message us through Whop within 30 days of delivery with your order number and a photo, and we replace it or refund it, free. In most cases you will not need to send it back.</div></details><details class="fq"><summary>Can I return it?</summary><div>Unopened calendars can come back within 30 days of delivery for any reason. Return shipping on a change of mind is paid by you. See our <a href="#refund-policy">refund policy</a> for the details.</div></details></div></section>
+<section class="faq" id="faq"><div class="in"><h2>Questions, answered</h2><details class="fq"><summary>When do I start opening it?</summary><div>Door number 1 opens on the 1st of December, then one door every day until Christmas Eve. It is a countdown, so it is best in their hands before the 1st.</div></details><details class="fq"><summary>Will it arrive before December?</summary><div>Orders leave the warehouse in 1 to 3 business days and arrive 7 to 14 business days after that, with free tracking. The earlier you order, the more doors they get to open. Cutting it close? Message us through our <a href="#contact">contact page</a> before you order and we will tell you honestly.</div></details><details class="fq"><summary>Do you ship to my country?</summary><div>Yes. Shipping is free and tracked worldwide. Depending on where you live, your country may charge import taxes on arrival.</div></details><details class="fq"><summary>What&#x27;s inside?</summary><div>24 mini 3D aircraft, one for each night from 1 to 24 December, each on its own display stand: WWII fighters and bombers, jets, stealth bombers, transport planes and helicopters. Each is about 4 cm (1.6 in) nose to tail. Small collectibles for a desk or shelf, not large die-cast models.</div></details><details class="fq"><summary>Can I buy more than one?</summary><div>Yes, and each one gets cheaper: <span data-usd="44.99">$44.99</span> each for two, <span data-usd="42.49">$42.49</span> each for three and <span data-usd="39.99">$39.99</span> each for four. Perfect for a squadron of plane lovers or a Secret Santa.</div></details><details class="fq"><summary>What if it arrives damaged?</summary><div>Send us a photo within 30 days of delivery and we replace it or refund it, free. Message us through our <a href="#contact">contact page</a>.</div></details><details class="fq"><summary>Can I return it?</summary><div>Unopened calendars can come back within 30 days of delivery for any reason. See our <a href="#refund-policy">refund policy</a> for the details.</div></details></div></section>
 <footer class="ftr"><div class="in"><img src="logo.png" alt="Warbird Advent" class="flogo"><p class="blurb">Warbird Advent: an advent calendar for the aviation lover in your life. Twenty four doors, one aircraft a night, the 1st to the 24th of December.</p>
 <div class="fcols"><div><p class="fh">SHOP</p><ul><li><a href="#top">Warbird Advent™ Aircraft Advent Calendar</a></li><li><a href="#faq">FAQ</a></li></ul></div><div><p class="fh">HELP</p><ul><li><a href="#contact">Contact</a></li><li><a href="#shipping-policy">Shipping policy</a></li><li><a href="#refund-policy">Refund policy</a></li></ul></div><div><p class="fh">LEGAL</p><ul><li><a href="#terms-of-service">Terms of service</a></li><li><a href="#privacy-policy">Privacy policy</a></li></ul></div></div>
 <p class="soc"><a href="https://www.instagram.com/warbirdadvent" target="_blank" rel="noopener">Instagram</a> · <a href="https://www.tiktok.com/@warbird.advent" target="_blank" rel="noopener">TikTok</a></p><ul class="pay" aria-label="Payment methods"><li class="amex">AMEX</li><li class="apple">Apple Pay</li><li class="gpay">G Pay</li><li class="mc"><i></i><i></i></li><li class="visa">VISA</li></ul><p class="copy">© 2026 Warbird Advent. Prices shown in your currency, charged at checkout.</p></div></footer></main>
@@ -232,7 +231,7 @@ body.lock{overflow:hidden}
 
 <h2>6. Add-ons</h2>
 <ul>
-<li><strong>Shipping Protection</strong> claims are made by messaging us through Whop within 30 days of delivery, or of the last carrier scan where a parcel never arrived. We replace the order once at no cost, or refund it in full, at your choice.</li>
+<li><strong>Shipping Protection</strong> covers a parcel the carrier marks as delivered that never reaches you: message us through Whop within 14 days of the delivery date with your order number and we reship it free. A parcel lost in transit is covered on every order (see our Shipping Policy). Shipping Protection is not refundable once your order has shipped.</li>
 <li><strong>The Mystery Box</strong> is a bonus physical item and cannot be returned or refunded separately from the order it shipped with.</li>
 </ul>
 
@@ -245,61 +244,39 @@ body.lock{overflow:hidden}
 
 <h2>8. Contact</h2>
 <p>All returns, refunds and cancellations go through our Whop support chat. We reply within 24 hours, seven days a week.</p>
-</div></section><section class="pol" id="pol-shipping-policy" hidden><button class="back" data-back>← Back to the store</button><div class="pol-body"><h2>Shipping Policy</h2>
-<p>This policy explains where we ship, what it costs, and how long it takes. It forms part of our Terms of Service.</p>
+</div></section><section class="pol" id="pol-shipping-policy" hidden><button class="back" data-back>← Back to the store</button><div class="pol-body"><h2>Shipping policy</h2>
+<p>Last updated 7 October 2026</p>
+<p>Every order from warbirdadvent.shop ships free and tracked, worldwide.</p>
 
-<h2>1. Where we ship and what it costs</h2>
-<ul>
-<li>We ship <strong>worldwide, to every country we are able to serve</strong>.</li>
-<li><strong>Shipping is free on every order, with no minimum spend.</strong> There is one standard shipping method and it is the one shown at checkout.</li>
-</ul>
+<h2>Processing time</h2>
+<p>Orders leave our warehouse within 1 to 3 business days. Orders placed on weekends or public holidays start processing the next business day.</p>
 
-<h2>2. Dispatch time</h2>
-<ul>
-<li>Orders are picked and dispatched within <strong>1 to 2 business days</strong> of being placed.</li>
-<li>Orders placed on a weekend or a public holiday are dispatched the next business day.</li>
-<li>Transit time is added on top of the dispatch time. See section 3.</li>
-</ul>
+<h2>Delivery time</h2>
+<p>Delivery takes 7 to 14 business days once your order has left the warehouse. Remote areas and the December peak can occasionally take a little longer.</p>
 
-<h2>3. Transit time</h2>
-<ul>
-<li>Once dispatched, standard delivery takes <strong>6 to 10 business days</strong>.</li>
-<li>Transit times are carrier estimates, not guarantees. Peak periods, customs inspections and remote delivery areas can add time.</li>
-</ul>
+<h2>Christmas delivery</h2>
+<p>An advent calendar starts on the 1st of December, so we suggest ordering early. Any delivery estimate we give is our best advice based on current transit times, not a guaranteed date. Cutting it close? Message us through our <a href="#contact">contact page</a> before you order and we will tell you honestly whether it is likely to make it.</p>
 
-<h2>4. Tracking</h2>
-<ul>
-<li>A tracking number is emailed to you when your order is dispatched.</li>
-<li>Tracking can take 24 to 72 hours to show its first scan after the number is issued. That is normal and does not mean the parcel is lost.</li>
-<li>If tracking has not updated for 10 business days, message us through Whop and we will open an enquiry with the carrier.</li>
-</ul>
+<h2>Shipping cost</h2>
+<p>Shipping is free on every order, with no minimum spend.</p>
 
-<h2>5. Address changes</h2>
-<ul>
-<li><strong>Before dispatch:</strong> we can change the delivery address. Message us through Whop with your order number and the correct address as early as you can.</li>
-<li><strong>After dispatch:</strong> we cannot change it. We will send you the tracking number and the carrier's redirect options, which most carriers offer directly to the recipient.</li>
-<li>We are not responsible for a parcel delivered to an address that was entered incorrectly at checkout. Please check your address before you pay.</li>
-</ul>
+<h2>Tracking</h2>
+<p>We email your tracking link the moment your order leaves the warehouse.</p>
 
-<h2>6. Lost, stolen or damaged parcels</h2>
-<ul>
-<li>Message us through Whop with your order number and we will investigate with the carrier.</li>
-<li>If you selected <strong>Shipping Protection</strong>, a parcel confirmed lost or stolen, or delivered damaged, is replaced once at no cost to you or refunded in full, at your choice. Claims are made within 30 days of the delivery date or the last carrier scan.</li>
-<li>Without Shipping Protection we will still pursue a carrier claim on your behalf, but a resolution depends on the carrier's own findings.</li>
-</ul>
+<h2>Customs, duties and taxes</h2>
+<p>Your order ships from our overseas warehouse, so depending on where you live it may attract import duties or taxes on arrival. Any of these charges are paid by the buyer.</p>
 
-<h2>7. Customs, duties and taxes</h2>
-<ul>
-<li>Prices at checkout include any tax we are required to charge.</li>
-<li>Import duties, customs charges or local taxes levied by your own country are set by that country and are your responsibility. We cannot calculate or pre-pay them.</li>
-<li>Refusing a parcel at customs is treated as a change of mind return under our Refund Policy.</li>
-</ul>
+<h2>Lost in transit</h2>
+<p>Your order is our responsibility until it is delivered. If tracking has not updated for 10 days, or your order has not arrived within 4 weeks of leaving the warehouse, message us through our <a href="#contact">contact page</a> with your order number. If the carrier confirms it is lost, we send a free replacement or a full refund, whether or not you added Shipping Protection.</p>
 
-<h2>8. Split deliveries</h2>
-<p>Orders containing more than one item may arrive in more than one parcel, with separate tracking numbers. If part of your order has arrived and the rest has not, allow a few additional days before contacting us.</p>
+<h2>Shipping Protection (optional add on)</h2>
+<p>Shipping Protection covers what happens after the carrier marks your parcel as delivered. If it is marked delivered but never reaches you, message us through our <a href="#contact">contact page</a> within 14 days of the delivery date with your order number and we reship it free. A calendar that arrives damaged or faulty is covered on every order by our <a href="#refund-policy">refund policy</a>, with or without Shipping Protection. Shipping Protection is not refundable once your order has shipped.</p>
 
-<h2>9. Contact</h2>
-<p>All shipping questions go to our Whop support chat. We reply within 24 hours, seven days a week.</p>
+<h2>Wrong address</h2>
+<p>Please check your address at checkout. If you spot a mistake, contact us straight away. If your order has not shipped yet, we can change the address. Once it has shipped we cannot change it, but we will send you the tracking so you can ask the carrier to redirect it.</p>
+
+<h2>Contact us</h2>
+<p>Message us through our <a href="#contact">contact page</a>. We reply within 24 hours, 7 days a week.</p>
 </div></section><section class="pol" id="pol-privacy-policy" hidden><button class="back" data-back>← Back to the store</button><div class="pol-body"><h2>Privacy Policy</h2>
 <p>This policy explains what personal information Warbird Advent collects when you visit or buy from warbirdadvent.shop, how we use it, and who we share it with.</p>
 
@@ -408,7 +385,7 @@ body.lock{overflow:hidden}
 <h2>6. Add-on services</h2>
 <p>Optional add-ons may be offered at checkout. Each is defined below. If you did not select an add-on at checkout, it does not apply to your order.</p>
 <ul>
-<li><strong>Shipping Protection.</strong> Covers your order against loss, theft or damage in transit. If your parcel is confirmed lost by the carrier, or arrives damaged, we replace it once at no cost to you, or refund it in full at your choice. Claims must be made within 30 days of the delivery date, or of the last carrier scan where the parcel never arrived.</li>
+<li><strong>Shipping Protection.</strong> Covers what happens after the carrier marks your parcel as delivered. If it is marked delivered but never reaches you, message us within 14 days of the delivery date with your order number and we reship it free. A parcel lost in transit is covered on every order under our Shipping Policy, and a calendar that arrives damaged or faulty is covered on every order under our Refund Policy. Shipping Protection is not refundable once your order has shipped.</li>
 <li><strong>Mystery Box.</strong> A physical bonus item, selected by us, shipped inside your order at no extra shipping cost. The contents are not disclosed before delivery and cannot be chosen, exchanged or returned separately. It is not a competition, a lottery or a game of chance, and it has no cash value.</li>
 </ul>
 
@@ -463,7 +440,7 @@ body.lock{overflow:hidden}
 <div class="co" id="co" hidden role="dialog" aria-modal="true" aria-labelledby="co-t"><div class="co-box"><div class="dh"><h2 id="co-t">Checkout</h2><button class="ibtn" id="co-x" aria-label="Close checkout">✕</button></div>
 <p class="co-sum" id="co-sum"></p><p class="co-wait" id="co-wait">Loading secure checkout…</p><div id="co-mount"></div></div></div>
 <div class="co" id="thanks" hidden role="dialog" aria-modal="true"><div class="co-box ty"><h2>Thank you. Your order is in.</h2>
-<p>Your receipt is on its way to your email. Your order leaves us within 1 to 2 business days.</p><button class="atc" id="ty-x">Back to the store</button></div></div>
+<p>Your receipt is on its way to your email. Your order leaves the warehouse within 1 to 3 business days, and your tracking link is emailed the moment it ships.</p><button class="atc" id="ty-x">Back to the store</button></div></div>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 <script>
 const D = {"title": "Warbird Advent™ Aircraft Advent Calendar", "prices": {"1|": 49.99, "1|Shipping Protection": 54.98, "1|Mystery Box": 59.98, "1|Mystery Box+Shipping Protection": 64.97, "2|": 89.98, "2|Shipping Protection": 94.97, "2|Mystery Box": 99.97, "2|Mystery Box+Shipping Protection": 104.96, "3|": 127.47, "3|Shipping Protection": 132.46, "3|Mystery Box": 137.46, "3|Mystery Box+Shipping Protection": 142.45, "4|": 159.97, "4|Shipping Protection": 164.96, "4|Mystery Box": 169.96, "4|Mystery Box+Shipping Protection": 174.95}, "tiers": [1, 2, 3, 4], "ups": ["Shipping Protection", "Mystery Box"], "compare": 71.99, "plans": {"1|": "plan_beeUSdPNRiivq", "1|Shipping Protection": "plan_dxGPQ304KbrnN", "1|Mystery Box": "plan_JN2tY5qXGaHHs", "1|Mystery Box+Shipping Protection": "plan_005Yjwm9SCVM7", "2|": "plan_ICCH1dbUPVRT5", "2|Shipping Protection": "plan_raN9KvmJVHxAO", "2|Mystery Box": "plan_CYpiFyWJgQ9T4", "2|Mystery Box+Shipping Protection": "plan_MIOIyDKDC8U0k", "3|": "plan_qpuIo7su0JJM2", "3|Shipping Protection": "plan_PuaY1XOihU5hJ", "3|Mystery Box": "plan_a6AIOQJfSNFC1", "3|Mystery Box+Shipping Protection": "plan_Olzr8xOIJZgmv", "4|": "plan_KzF3sK2XIArDE", "4|Shipping Protection": "plan_C8U8cuAIgAWaJ", "4|Mystery Box": "plan_NWnvJjdpui7l3", "4|Mystery Box+Shipping Protection": "plan_AHt4zSKn6Pwym"}, "live": true, "email": "", "icons": {"Shipping Protection": "M12 2.8l7.5 3v5.6c0 4.6-3.2 8.5-7.5 10.1-4.3-1.6-7.5-5.5-7.5-10.1V5.8zM8.6 12.2l2.4 2.4 4.4-4.6", "Mystery Box": "M3.5 9h17v3.5h-17zM5 12.5h14V21H5zM12 9v12M12 9C10.5 5.6 7 5.2 7 7.3 7 8.6 9.4 9 12 9zm0 0c1.5-3.4 5-3.8 5-1.7 0 1.3-2.4 1.7-5 1.7"}};
@@ -492,10 +469,6 @@ $$(".up").forEach(el => el.addEventListener("click", e => { e.preventDefault(); 
 const sl = $("#slides");
 $$(".th").forEach(b => b.addEventListener("click", () => sl.scrollTo({left: sl.clientWidth * +b.dataset.i, behavior: "smooth"})));
 sl.addEventListener("scroll", () => { const i = Math.round(sl.scrollLeft / sl.clientWidth); $$(".th").forEach((b, n) => b.classList.toggle("on", n === i)); }, {passive: true});
-/* delivery line: real dates off today */
-(() => { const e = $("#eta"); if(!e) return; const add = (d, n) => { d = new Date(d); let k = 0; while(k < n){ d.setDate(d.getDate() + 1); if(d.getDay() % 6) k++; } return d; };
-  const f = d => d.toLocaleDateString("en-US", {month: "short", day: "numeric"}); const [p1, p2] = e.dataset.pack.split("-").map(Number), [s1, s2] = e.dataset.ship.split("-").map(Number);
-  const t = new Date(); e.innerHTML = `Order today, delivered <b>${f(add(t, p1 + s1))} – ${f(add(t, p2 + s2))}</b>`; })();
 /* the countdown band: whole days to the 1st of December, the buyer's own midnight; gone once the doors are open */
 (() => { const now = new Date(), y = now.getMonth() === 11 ? now.getFullYear() + 1 : now.getFullYear(), d1 = new Date(y, 11, 1);
   const days = Math.ceil((d1 - now) / 864e5); if(now.getMonth() === 11 && now.getDate() <= 25){ $("#cdband").remove(); return; } $("#cdn").textContent = days; })();
