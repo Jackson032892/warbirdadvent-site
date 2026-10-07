@@ -507,7 +507,7 @@ $$(".up").forEach(el => el.addEventListener("click", e => { e.preventDefault(); 
   if(!cur || cur === "USD") return;
   fetch("https://open.er-api.com/v6/latest/USD").then(r => r.json()).then(j => {
     const r = j && j.rates && j.rates[cur]; if(!r) return;
-    FX.cur = cur; FX.rate = r * 1.0175;   // Whop's checkout converts 1.75% above the market rate (seen 7 Oct: A$81.82 market, A$83.25 charged) — the page shows what they pay
+    FX.cur = cur; FX.rate = r * 1.02;   // Whop's checkout converts ~2% above the daily market rate (seen 7 Oct: +1.75% at 01:00, +2.15% at 15:30 on US$49.99 → A$73.17), so the page shows what they pay to within cents
     $$("[data-usd]").forEach(e => e.textContent = money(+e.dataset.usd));
     render(); if(cart) renderCart();
     const n = $("#fxnote"); if(n){ n.textContent = `Prices in ${cur} · exact amount at checkout`; n.hidden = false; }
@@ -569,7 +569,7 @@ function warm(){ if(!cart || !D.plans[key(cart.q, cart.ups)] || !$("#co").hidden
 $("#checkout").addEventListener("click", () => {
   if(!cart) return;
   if(!D.plans[key(cart.q, cart.ups)]){ toast(D.live ? "Checkout opens in a few minutes. Please try again shortly." : "Preview: the real checkout switches on once the Whop prices are set."); return; }
-  $("#co-sum").textContent = `${D.title} · ${cart.q} calendar${cart.q > 1 ? "s" : ""}` + (cart.ups.length ? ` · + ${cart.ups.join(" + ")}` : "") + ` · ${money(total(cart.q, cart.ups))}`;
+  $("#co-sum").textContent = `${D.title} · ${cart.q} calendar${cart.q > 1 ? "s" : ""}` + (cart.ups.length ? ` · + ${cart.ups.join(" + ")}` : "");   // no price here: Whop's own figure below is the one they pay
   closeD(); $("#co").classList.remove("warm"); $("#co").hidden = false; document.body.classList.add("lock"); $("#co-wait").hidden = false; build();
   setTimeout(() => { const f = $("#co-mount iframe"); if(f && f.offsetHeight > 150) $("#co-wait").hidden = true; }, 4000);
 });
