@@ -490,7 +490,8 @@ function renderCart(){
   L.innerHTML = h; $("#sub").textContent = money(total(cart.q, cart.ups)); $("#cart-n").textContent = cart.q; $("#cart-n").hidden = false; $("#checkout").disabled = false;
   L.querySelectorAll("[data-rm]").forEach(b => b.addEventListener("click", () => { const u = b.dataset.rm; if(!u) cart = null; else cart.ups = cart.ups.filter(x => x !== u); renderCart(); }));
 }
-function addToCart(){ cart = {q: tq, ups: [...picked]}; renderCart(); openD("#cart"); warm(); }
+function px(ev, q, ups){ try { window.whop && window.whop.track(ev, {value: total(q, ups), currency: "usd"}); } catch(_){} }
+function addToCart(){ cart = {q: tq, ups: [...picked]}; px("add_to_cart", cart.q, cart.ups); renderCart(); openD("#cart"); warm(); }
 $("#atc").addEventListener("click", addToCart);
 $("#st-atc").addEventListener("click", addToCart);
 /* the sticky bar: on once the buy button scrolls away, off over the buy box and the footer */
@@ -518,6 +519,7 @@ $("#checkout").addEventListener("click", () => {
   if(!cart) return;
   if(!D.plans[key(cart.q, cart.ups)]){ toast(D.live ? "Checkout opens in a few minutes. Please try again shortly." : "Preview: the real checkout switches on once the Whop prices are set."); return; }
   $("#co-sum").textContent = `${D.title} · ${cart.q} calendar${cart.q > 1 ? "s" : ""}` + (cart.ups.length ? ` · + ${cart.ups.join(" + ")}` : "");   // no price here: Whop's own figure below is the one they pay
+  try { window.whop && window.whop.track("custom", {name: "checkout_open", value: total(cart.q, cart.ups), currency: "usd"}); } catch(_){}
   closeD(); $("#co").classList.remove("warm"); $("#co").hidden = false; document.body.classList.add("lock"); $("#co-wait").hidden = false; build();
   setTimeout(() => { const f = $("#co-mount iframe"); if(f && f.offsetHeight > 150) $("#co-wait").hidden = true; }, 4000);
 });
@@ -541,5 +543,5 @@ $$("details.fq, details.row").forEach(d => { const s = d.querySelector("summary"
   els.forEach(e => io.observe(e)); })();
 render(); renderCart(); route();
 </script>
-<script src="https://cdn.whop.com/elements/amber/elements.js" data-whop-elements async></script>
+<script src="https://cdn.whop.com/elements/amber/elements.js" data-whop-elements async></script><script data-whop-pixel="store">(function(){if(window.whop)return;!function(w,d,s,u,n,a,b){if(w[n])return;a=w[n]={q:[],t:+new Date,s:[],o:u,track:function(){a.q.push([+new Date].concat([].slice.call(arguments)))},setScope:function(){a.s=[].slice.call(arguments).filter(function(x){return typeof x==="string"});a.q.push([+new Date,"setScope"].concat(a.s))},scope:function(){var c=[].slice.call(arguments);return{track:function(){a.q.push([+new Date].concat([].slice.call(arguments)).concat([{__scope:c}]))}}}};b=d.createElement(s);b.async=1;b.src=u+"/s.js";d.getElementsByTagName(s)[0].parentNode.insertBefore(b,d.getElementsByTagName(s)[0])}(window,document,"script","https://t.whop.tw","whop");whop.setScope("biz_MpnmMuxNE1ZP3S");whop.track("page");})();</script>
 </body></html>
