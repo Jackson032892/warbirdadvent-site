@@ -1,5 +1,5 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Warbird Advent™ Aircraft Advent Calendar | Warbird Advent</title><meta name="description" content="An advent calendar for the aviation lover in your life. One door a night from the 1st of December, and behind each one a mini 3D aircraft on its own stand. By Christmas Eve, the whole squadron is lined up."><meta name="theme-color" content="#18202E"><link rel="icon" href="favicon.png">
+<title>Warbird Advent™ Aircraft Advent Calendar | Warbird Advent</title><meta name="description" content="An advent calendar for the aviation lover in your life. One door a night from the 1st of December, and behind each one a mini 3D aircraft on its own stand. By Christmas Eve, the whole squadron is lined up."><meta name="theme-color" content="#18202E"><link rel="icon" href="favicon.png"><link rel="canonical" href="https://warbirdadvent.shop/"><meta property="og:type" content="product"><meta property="og:url" content="https://warbirdadvent.shop/"><meta property="og:title" content="Warbird Advent™ Aircraft Advent Calendar | Warbird Advent"><meta property="og:description" content="An advent calendar for the aviation lover in your life. One door a night from the 1st of December, and behind each one a mini 3D aircraft on its own stand. By Christmas Eve, the whole squadron is lined up."><meta property="og:image" content="https://warbirdadvent.shop/g1.jpg"><meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
@@ -135,7 +135,7 @@ body.lock{overflow:hidden}
 
 <div class="price-row"><span class="price" data-usd="49.99">$49.99</span><s data-usd="71.99">$71.99</s><span class="off">30% OFF</span></div>
 <p class="each">or <span data-usd="39.99">$39.99</span> each in a 4 pack</p>
-<p class="fxn" id="fxnote" hidden></p>
+<p class="fxn" id="fxnote">Prices in US dollars · free tracked shipping worldwide</p>
 <div class="box">
 <p class="shipl"><i class="gdot"></i>Ships free worldwide, tracked</p>
 <p class="lab">BUNDLE &amp; SAVE</p>
@@ -468,11 +468,8 @@ body.lock{overflow:hidden}
 <script>
 const D = {"title": "Warbird Advent™ Aircraft Advent Calendar", "prices": {"1|": 49.99, "1|Shipping Protection": 54.98, "1|Mystery Box": 59.98, "1|Mystery Box+Shipping Protection": 64.97, "2|": 89.98, "2|Shipping Protection": 94.97, "2|Mystery Box": 99.97, "2|Mystery Box+Shipping Protection": 104.96, "3|": 127.47, "3|Shipping Protection": 132.46, "3|Mystery Box": 137.46, "3|Mystery Box+Shipping Protection": 142.45, "4|": 159.97, "4|Shipping Protection": 164.96, "4|Mystery Box": 169.96, "4|Mystery Box+Shipping Protection": 174.95}, "tiers": [1, 2, 3, 4], "ups": ["Shipping Protection", "Mystery Box"], "compare": 71.99, "plans": {"1|": "plan_beeUSdPNRiivq", "1|Shipping Protection": "plan_dxGPQ304KbrnN", "1|Mystery Box": "plan_JN2tY5qXGaHHs", "1|Mystery Box+Shipping Protection": "plan_005Yjwm9SCVM7", "2|": "plan_ICCH1dbUPVRT5", "2|Shipping Protection": "plan_raN9KvmJVHxAO", "2|Mystery Box": "plan_CYpiFyWJgQ9T4", "2|Mystery Box+Shipping Protection": "plan_MIOIyDKDC8U0k", "3|": "plan_qpuIo7su0JJM2", "3|Shipping Protection": "plan_PuaY1XOihU5hJ", "3|Mystery Box": "plan_a6AIOQJfSNFC1", "3|Mystery Box+Shipping Protection": "plan_Olzr8xOIJZgmv", "4|": "plan_KzF3sK2XIArDE", "4|Shipping Protection": "plan_C8U8cuAIgAWaJ", "4|Mystery Box": "plan_NWnvJjdpui7l3", "4|Mystery Box+Shipping Protection": "plan_AHt4zSKn6Pwym"}, "live": true, "email": "", "icons": {"Shipping Protection": "M12 2.8l7.5 3v5.6c0 4.6-3.2 8.5-7.5 10.1-4.3-1.6-7.5-5.5-7.5-10.1V5.8zM8.6 12.2l2.4 2.4 4.4-4.6", "Mystery Box": "M3.5 9h17v3.5h-17zM5 12.5h14V21H5zM12 9v12M12 9C10.5 5.6 7 5.2 7 7.3 7 8.6 9.4 9 12 9zm0 0c1.5-3.4 5-3.8 5-1.7 0 1.3-2.4 1.7-5 1.7"}};
 const $ = s => document.querySelector(s), $$ = s => [...document.querySelectorAll(s)];
-// his call 7 Oct: "make sure price translates to countries too" — the buyer sees their own currency (live rate, USD if anything fails);
-// Whop's checkout converts the charge itself, so the note says the checkout confirms the exact amount
-const FX = {cur: "USD", rate: 1};
-const money = x => FX.cur === "USD" ? "$" + x.toLocaleString("en-US", {minimumFractionDigits: 2, maximumFractionDigits: 2})
-  : new Intl.NumberFormat("en-US", {style: "currency", currency: FX.cur}).format(x * FX.rate);
+// his order 7 Oct: "The prices need to be in USD… We need it in USD. That's who we're targeting." — every buyer sees US dollars
+const money = x => "$" + x.toLocaleString("en-US", {minimumFractionDigits: 2, maximumFractionDigits: 2});
 let tq = D.tiers[0], picked = new Set(), cart = null;
 const svg = d => `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="${d}"/></svg>`;
 function toast(t){ const el = $("#toast"); el.textContent = t; el.classList.add("on"); clearTimeout(toast.t); toast.t = setTimeout(() => el.classList.remove("on"), 2800); }
@@ -491,28 +488,6 @@ function render(){
 $$(".tier").forEach(t => { t.addEventListener("click", () => { tq = +t.dataset.q; render(); });
   t.addEventListener("keydown", e => { if(e.key === "Enter" || e.key === " "){ e.preventDefault(); tq = +t.dataset.q; render(); } }); });
 $$(".up").forEach(el => el.addEventListener("click", e => { e.preventDefault(); const u = el.dataset.u; picked.has(u) ? picked.delete(u) : picked.add(u); render(); }));
-/* local currency: the country from the phone's time zone (then its language), the rate from a free live feed */
-(() => {
-  const tz = (Intl.DateTimeFormat().resolvedOptions().timeZone || ""), rg = ((navigator.language || "").split("-")[1] || "").toUpperCase();
-  const EUR = "Dublin Paris Berlin Madrid Rome Amsterdam Brussels Vienna Lisbon Helsinki Athens Luxembourg Monaco Malta Bratislava Ljubljana Tallinn Riga Vilnius Zagreb Nicosia Busingen Andorra Vatican San_Marino".split(" ");
-  const CAD = "Toronto Vancouver Edmonton Winnipeg Halifax Regina St_Johns Moncton Whitehorse Yellowknife Iqaluit Glace_Bay Goose_Bay Dawson_Creek Swift_Current Montreal Atikokan Creston Fort_Nelson Rankin_Inlet Cambridge_Bay Inuvik Resolute".split(" ");
-  const ZONE = {"Europe/London": "GBP", "Europe/Belfast": "GBP", "Europe/Guernsey": "GBP", "Europe/Jersey": "GBP", "Europe/Isle_of_Man": "GBP",
-    "Pacific/Auckland": "NZD", "Pacific/Chatham": "NZD", "Europe/Stockholm": "SEK", "Europe/Oslo": "NOK", "Europe/Copenhagen": "DKK",
-    "Europe/Zurich": "CHF", "Europe/Warsaw": "PLN", "Asia/Singapore": "SGD", "Asia/Tokyo": "JPY", "Asia/Kolkata": "INR", "Asia/Calcutta": "INR",
-    "America/Mexico_City": "MXN", "Africa/Johannesburg": "ZAR", "Asia/Dubai": "AED", "Asia/Hong_Kong": "HKD", "America/Sao_Paulo": "BRL", "Asia/Manila": "PHP"};
-  const REGION = {AU: "AUD", NZ: "NZD", GB: "GBP", UK: "GBP", CA: "CAD", IE: "EUR", DE: "EUR", FR: "EUR", ES: "EUR", IT: "EUR", NL: "EUR", BE: "EUR", AT: "EUR", PT: "EUR", FI: "EUR"};
-  const [area, city] = tz.split("/");
-  let cur = area === "Australia" ? "AUD" : ZONE[tz] || (area === "Europe" && EUR.includes(city) ? "EUR" : area === "America" && CAD.includes(city) ? "CAD" : null);
-  if(!cur && !/^America\//.test(tz)) cur = REGION[rg] || null;
-  if(!cur || cur === "USD") return;
-  fetch("https://open.er-api.com/v6/latest/USD").then(r => r.json()).then(j => {
-    const r = j && j.rates && j.rates[cur]; if(!r) return;
-    FX.cur = cur; FX.rate = r * 1.02;   // Whop's checkout converts ~2% above the daily market rate (seen 7 Oct: +1.75% at 01:00, +2.15% at 15:30 on US$49.99 → A$73.17), so the page shows what they pay to within cents
-    $$("[data-usd]").forEach(e => e.textContent = money(+e.dataset.usd));
-    render(); if(cart) renderCart();
-    const n = $("#fxnote"); if(n){ n.textContent = `Prices in ${cur} · exact amount at checkout`; n.hidden = false; }
-  }).catch(() => {});
-})();
 /* gallery */
 const sl = $("#slides");
 $$(".th").forEach(b => b.addEventListener("click", () => sl.scrollTo({left: sl.clientWidth * +b.dataset.i, behavior: "smooth"})));
